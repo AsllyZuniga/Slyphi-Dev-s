@@ -8,6 +8,7 @@ interface ProjectCardProps {
   url: string;
   visitLabel: string;
   index: number;
+  noPreview?: boolean;
 }
 
 const gradients = [
@@ -20,7 +21,7 @@ const gradients = [
   'from-(--color-galeras) to-(--color-gold)',
 ];
 
-export default function ProjectCard({ name, desc, tech, url, visitLabel, index }: ProjectCardProps) {
+export default function ProjectCard({ name, desc, tech, url, visitLabel, index, noPreview }: ProjectCardProps) {
   const [loaded, setLoaded] = useState(false);
   const initials = name
     .split(' ')
@@ -46,21 +47,23 @@ export default function ProjectCard({ name, desc, tech, url, visitLabel, index }
             backgroundSize: '24px 24px',
           }}
         />
-        <div
-          className="pointer-events-none absolute inset-0 overflow-hidden transition-opacity duration-700"
-          style={{ opacity: loaded ? 1 : 0 }}
-        >
-          <iframe
-            src={url}
-            title={`${name} preview`}
-            loading="lazy"
-            tabIndex={-1}
-            aria-hidden="true"
-            onLoad={() => setLoaded(true)}
-            className="origin-top-left"
-            style={{ width: '400%', height: '400%', transform: 'scale(0.25)', border: 0 }}
-          />
-        </div>
+        {!noPreview && (
+          <div
+            className="pointer-events-none absolute inset-0 overflow-hidden transition-opacity duration-700"
+            style={{ opacity: loaded ? 1 : 0 }}
+          >
+            <iframe
+              src={url}
+              title={`${name} preview`}
+              loading="lazy"
+              tabIndex={-1}
+              aria-hidden="true"
+              onLoad={() => setLoaded(true)}
+              className="origin-top-left"
+              style={{ width: '400%', height: '400%', transform: 'scale(0.25)', border: 0 }}
+            />
+          </div>
+        )}
       </div>
 
       <div className="flex flex-1 flex-col p-7">

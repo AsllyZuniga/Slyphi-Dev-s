@@ -4,6 +4,8 @@ import Eyebrow from '../components/Eyebrow';
 import Reveal from '../components/Reveal';
 import ProjectCard from '../components/ProjectCard';
 
+const NO_PREVIEW = new Set(['Monstrico Verde']);
+
 export default function Projects() {
   const { t } = useLanguage();
 
@@ -27,6 +29,7 @@ export default function Projects() {
               url={project.url}
               visitLabel={t.projects.visit}
               index={i}
+              noPreview={NO_PREVIEW.has(project.name)}
             />
           </Reveal>
         ))}
