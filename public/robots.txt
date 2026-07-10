@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://asllyzuniga.github.io/Slyphi-Dev-s/sitemap.xml

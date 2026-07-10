@@ -1,0 +1,17 @@
+{
+  "name": "Slyphi Dev's — Estudio de Desarrollo de Software",
+  "short_name": "Slyphi Dev's",
+  "description": "Estudio de software colombiano en Pasto, Nariño. Aplicaciones web, sistemas empresariales y soluciones digitales a la medida.",
+  "start_url": "/Slyphi-Dev-s/",
+  "scope": "/Slyphi-Dev-s/",
+  "display": "standalone",
+  "background_color": "#0B1120",
+  "theme_color": "#0B1120",
+  "icons": [
+    {
+      "src": "/Slyphi-Dev-s/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

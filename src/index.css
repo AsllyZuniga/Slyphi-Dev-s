@@ -1,0 +1,112 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Type */
+  --font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
+  --font-sans: 'Inter', 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Brand palette — "Blueprint Andino" */
+  --color-ink: #0b1120;
+  --color-ink-2: #10182c;
+  --color-paper: #f7f5f0;
+  --color-paper-2: #efece3;
+  --color-blueprint: #2b5d8c;
+  --color-blueprint-light: #5b8fc4;
+  --color-rust: #c4622d;
+  --color-rust-light: #e08650;
+  --color-galeras: #4a5d4e;
+  --color-gold: #d4a24c;
+
+  --animate-gradient: gradient-shift 14s ease infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-marquee: marquee 32s linear infinite;
+
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-14px); }
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+}
+
+:root {
+  color-scheme: light;
+  --bg: var(--color-paper);
+  --bg-2: var(--color-paper-2);
+  --fg: var(--color-ink);
+  --fg-muted: #4b5065;
+  --border: rgba(11, 17, 32, 0.1);
+  --surface: rgba(255, 255, 255, 0.6);
+  --grid-line: rgba(43, 93, 140, 0.08);
+}
+
+:root.dark {
+  color-scheme: dark;
+  --bg: var(--color-ink);
+  --bg-2: var(--color-ink-2);
+  --fg: #f2f0ea;
+  --fg-muted: #a3a9bd;
+  --border: rgba(242, 240, 234, 0.1);
+  --surface: rgba(16, 24, 44, 0.55);
+  --grid-line: rgba(91, 143, 196, 0.12);
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 64px 64px;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+::selection {
+  background: var(--color-rust);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-rust);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.text-balance {
+  text-wrap: balance;
+}

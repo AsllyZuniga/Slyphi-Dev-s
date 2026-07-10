@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b1120" />
+
+    <title>Slyphi Dev's — Estudio de Desarrollo de Software en Pasto, Colombia</title>
+    <meta name="description" content="Slyphi Dev's es un estudio de software colombiano con sede en Pasto, Nariño. Construimos aplicaciones web, sistemas empresariales y soluciones digitales a la medida con arquitecturas modernas y código de alta calidad." />
+    <meta name="keywords" content="desarrollo de software, aplicaciones web, Pasto, Nariño, Colombia, React, Angular, Node.js, .NET, transformación digital, software a medida" />
+    <meta name="author" content="Slyphi Dev's" />
+    <link rel="canonical" href="https://asllyzuniga.github.io/Slyphi-Dev-s/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Slyphi Dev's" />
+    <meta property="og:title" content="Slyphi Dev's — Estudio de Desarrollo de Software" />
+    <meta property="og:description" content="Software a la medida, arquitecturas modernas y transformación digital desde Pasto, Colombia para el mundo." />
+    <meta property="og:image" content="https://asllyzuniga.github.io/Slyphi-Dev-s/og-cover.jpg" />
+    <meta property="og:url" content="https://asllyzuniga.github.io/Slyphi-Dev-s/" />
+    <meta property="og:locale" content="es_CO" />
+    <meta property="og:locale:alternate" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Slyphi Dev's — Estudio de Desarrollo de Software" />
+    <meta name="twitter:description" content="Software a la medida, arquitecturas modernas y transformación digital desde Pasto, Colombia para el mundo." />
+    <meta name="twitter:image" content="https://asllyzuniga.github.io/Slyphi-Dev-s/og-cover.jpg" />
+
+    <link rel="icon" type="image/svg+xml" href="/Slyphi-Dev-s/favicon.svg" />
+    <link rel="manifest" href="/Slyphi-Dev-s/manifest.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Slyphi Dev's",
+      "image": "https://asllyzuniga.github.io/Slyphi-Dev-s/og-cover.jpg",
+      "description": "Estudio de desarrollo de software colombiano con sede en Pasto, Nariño. Aplicaciones web, sistemas empresariales y soluciones digitales a la medida.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Pasto",
+        "addressRegion": "Nariño",
+        "addressCountry": "CO"
+      },
+      "url": "https://asllyzuniga.github.io/Slyphi-Dev-s/",
+      "sameAs": [
+        "https://github.com/feliperivasdev",
+        "https://github.com/AsllyZuniga"
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <script>
+      (function () {
+        var theme = localStorage.getItem('slyphi-theme');
+        if (!theme) theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        if (theme === 'dark') document.documentElement.classList.add('dark');
+        var lang = localStorage.getItem('slyphi-lang') || 'es';
+        document.documentElement.lang = lang;
+      })();
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
