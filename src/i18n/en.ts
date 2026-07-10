@@ -110,6 +110,8 @@ const en: Dict = {
       { name: 'Hat Makers Corner', desc: 'Corporate and institutional site for a hat-making brand.', tech: ['WordPress'], url: 'https://hatmakerscorner.com/' },
       { name: 'NeuroKids', desc: 'Web platform for child neurodevelopment services.', tech: ['React', 'Express'], url: 'https://neurokids.click/' },
       { name: 'VCE Consultores', desc: 'Institutional site for a business consulting firm.', tech: ['React', 'Express'], url: 'https://vceconsultores.com/' },
+      { name: 'SIS Documental', desc: 'Document management system to organize and browse files online.', tech: ['HTML', 'CSS', 'JavaScript'], url: 'https://sisdocumental.online/' },
+      { name: 'Monstrico Verde', desc: 'Website with an embedded interactive game, built in GameMaker.', tech: ['HTML', 'JavaScript', 'GameMaker'], url: 'https://monstrico-verde.click/' },
     ],
   },
   process: {
